@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar__container">
+            <h1> Incentive Points </h1>
+               <div class="navbar__toggle" id="mobile-menu">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+               </div>
+            <ul class="navbar__menu">
+               <li class="navbar__item">
+                  <a href="" class="navbar__links">Point Settings</a>
+               </li>
+               <li class="navbar__item">
+                  <a href="navbar/addpoints.html" class="navbar__links">Add Points</a>
+               </li>
+               <li class="navbar__item">
+                  <a href="navbar/setpoints.html" class="navbar__links">Set Points</a>
+               </li>
+               <li class="navbar__item">
+                  <a href="navbar/fontsettings.html" class="navbar__links">Font Settings</a>
+               </li>
+               <li class="navbar__item">
+                  <a href="navbar/streamlabs.html" class="navbar__links">Connect Streamlabs</a>
+               </li>
+               <li class="navbar__item">
+                  <a href="navbar/pointwidget.html" class="navbar__links">Point Widget</a>
+               </li>
+               <li class="navbar__btn">
+                <a href="landingpage.html" class="button2">Logout</a>
+             </li>
+            </ul>
+         </div>
+         </nav>
+         <script src="navbar.js"></script>
+        <br>
+        <br>
+        <form>
+        <br>
+            <h2>Tips and Bits:</h2>
+            <input type="number" name="pointsPerBits" value="3"> points per <input type="number" name="perBits" value="100"> Bits
+        <br>
+        <br>
+            <input type="number" name="pointsPerDollar" value="3"> points per <input type="number" name="perDollar" value="1"> Dollar(s)
+        <br>
+        <br>
+        <h2>Subscriptions:</h2>
+            <input type="checkbox" name="includeGifts" value="true" checked="" id="padBox"> include gifted subs
+        <br>
+            <input type="checkbox" name="includeResubs" value="true" checked="" id="padBox"> include resubscriptions
+        <br>
+        <br>
+            <input type="number" name="pointsPerSub" value="10"> points per Tier 1 Sub
+        <br>
+        <br>
+            <input type="number" name="pointsPerSubT2" value="20"> points per Tier 2 Sub
+        <br>
+        <br>
+            <input type="number" name="pointsPerSubT3" value="60"> points per Tier 3 Sub
+        <br>
+        <br>
+        <button class="button special" type="submit" id="saveSetBtn">Save Settings</button>
+        </form>
+    </body>
+    <footer>
+
+    </footer>
+</html>
