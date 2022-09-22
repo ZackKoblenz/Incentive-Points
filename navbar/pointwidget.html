@@ -2,8 +2,11 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.socket.io/socket.io-2.3.1.slim.js"></script>
+        <script src="../app.js"></script>
     </head>
     <body>
+      <!--
         <nav class="navbar">
             <div class="navbar__container">
             <h1> Incentive Points </h1>
@@ -40,10 +43,20 @@
          <script src="navbar.js"></script>
         <br>
         <br>
+        
         <form>
         
         <button class="button special" type="submit" id="generateLinkBtn">Generate New Link</button>
         </form>
+      -->
+      
+        <div id="points"></div>
+        <a href="../index.html">settings</a>
+        <script>
+           const settings = new IPSettings();
+           const pointsManager = new PointsManager(settings);
+           const sl = new SLEventWatcher(settings.slToken, pointsManager);
+        </script>
     </body>
     <footer>
 
