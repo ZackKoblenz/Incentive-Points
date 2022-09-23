@@ -243,11 +243,19 @@ class SLEventWatcher {
             case 'subscription':
                 eventData.message.forEach( sub => {
                     // subs are probably 1k, 2k, 3k based on https://dev.twitch.tv/docs/eventsub/eventsub-reference#events
+                    let plan = sub.sub_plan;
+                    if(plan === "prime") {
+                        plan = "1000";
+                    }
                     this.#pointsManager.addSub(Number(sub.sub_plan)/1000, sub.months, false);
                 });
                 break;
             case 'resub':
                 eventData.message.forEach( resub => {
+                    let plan = resub.sub_plan;
+                    if(plan === "prime") {
+                        plan = "1000";
+                    }
                     this.#pointsManager.addSub(Number(resub.sub_plan)/1000, 1, true);
                 });
                 break;
