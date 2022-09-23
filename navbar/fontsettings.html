@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <script src="../app.js"></script>
     </head>
     <body>
         <nav class="navbar">
@@ -42,12 +43,12 @@
         <br>
         <form>
         <div>
-            <input type="number" value="72">
+            <input type="number" value="72" id="fontSize">
             <br>
             Size
         </div>
         <div>
-        <select name="weight" id="fweight">
+        <select name="weight" id="fontWeight">
             <option value="200">Light</option>
             <option value="400">Normal</option>
             <option value="700">Bold</option>
@@ -56,13 +57,16 @@
         Weight
         </div>
         <div>
-            <input tpye="text">
+            <input type="color" id="fontColor">
             <br>
             Color
         </div>
         <br>
         <button class="button special" type="submit" id="saveSetBtn">Save Settings</button>
         </form>
+        <script>
+         const settings = new IPSettings();
+        </script>
     </body>
     <footer>
 

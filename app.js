@@ -9,6 +9,9 @@ class IPSettings {
     pointsPerSub = 10;
     pointsPerSubT2 = 20;
     pointsPerSubT3 = 30;
+    fontSize = 72;
+    fontWeight = 'Normal';
+    fontColor = '#ffffff';
     slToken = '';
 
     static storageKey = 'ZK.IncentivePoints.Settings';
@@ -24,6 +27,9 @@ class IPSettings {
             'pointsPerSub',
             'pointsPerSubT2',
             'pointsPerSubT3',
+            'fontSize',
+            'fontWeight',
+            'fontColor',
             'slToken',
         ];
     }
@@ -73,6 +79,8 @@ class IPSettings {
                         case 'checkbox':
                             this[id] = event.target.checked;
                             break;
+                        case 'select-one':
+                            this[id] = event.target.value;
                         default:
                             this[id] = event.target.value;
                             break;
@@ -86,6 +94,12 @@ class IPSettings {
                 settings.save();
                 event.preventDefault();
             });
+        }
+        const points = document.getElementById('points');
+        if(points) {
+            points.style.fontSize = `${this.fontSize}px`;
+            points.style.fontWeight = this.fontWeight;
+            points.style.color = this.fontColor;
         }
     }
 }
