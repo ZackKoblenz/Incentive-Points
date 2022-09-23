@@ -133,10 +133,11 @@ class PointsManager {
         }
     }
 
-    update() {
+    async update() {
         const e = document.getElementById('points');
         if(e) {
             e.innerText = this.points;
+            await animistaCSS($(e), 'jello-horizontal', false);
         }
     }
 
@@ -262,3 +263,26 @@ class SLEventWatcher {
         }
     }
 }
+
+
+async function animistaCSS(node, animationName, infinite = false) {
+    return new Promise( (resolve, reject) => {
+      const classes = [animationName];
+  
+      if(!infinite) {
+        const timeout = setTimeout(() => {
+          node.removeClass(classes);
+          resolve();
+        }, 2000);
+  
+        node.one('animationend', (event) => {
+          clearTimeout(timeout);
+          event.stopPropagation();
+          node.removeClass(classes);
+          resolve();
+        });
+      }
+      
+      node.addClass(classes);
+    });
+  }
