@@ -16,12 +16,25 @@ body{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    text-align: center;
     background: #36393e;
     font-weight: 100;
     margin: 0px;
     padding: 100px;
     color:#ffffff;
+}
+#center {
+    text-align: center;
+}
+
+ul { 
+	width: 400px; 
+	margin-left: auto; 
+	margin-right: auto; 
+	}
+
+div[name=list]{
+    align-items: center;
+    align-content: center;
 }
 form {
     align-items: center;

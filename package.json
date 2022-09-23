@@ -1,0 +1,7 @@
+{
+    "type": "module",
+    "dependencies": {
+        "api": "^4.5.2",
+        "node-fetch": "^3.2.10"
+    }
+}

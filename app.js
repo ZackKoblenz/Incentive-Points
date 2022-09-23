@@ -297,3 +297,9 @@ async function animistaCSS(node, animationName, infinite = false) {
       node.addClass(classes);
     });
   }
+
+  window.onload = function(){
+    init(); 
+}
+
+

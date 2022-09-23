@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
         <script src="../app.js"></script>
     </head>
     <body>
@@ -42,14 +42,31 @@
         <br>
         <br>
         <form>
-         <input type="text" name="slToken" id="slToken" value=""> Token
+         <div id="center">
+         Copy Socket Token Here:
          <br>
          <br>
-        <button class="button special" type="submit" id="saveSetBtn">Link Streamlabs</button>
-        </form>
+         <input type="text" name="slToken" id="slToken" value=""> 
+         <br>
+         <br>
+         </div>
+         <div name="list">
+         <ul>
+            <il>1. Click button below to find socket token</il><br>
+            <il>2. Click the "API Tokens" tab</il><br>
+            <il>3. Copy + Paste your Socket API Token Above </il><br>
+            <il>4. Click "Link Streamlabs"</il>
+         </ul>
+         </div>
+         <br>
+         <div id="center">
+         <button class="button special" type="submit" id="socketToken">Find Streamlabs Socket Token</button> <button class="button special" type="submit" id="saveSetBtn">Link Streamlabs</button>
+      </div>
+      </form>
         <script>
          const settings = new IPSettings();
         </script>
+        <script src="../backend.js"></script>
     </body>
     <footer>
 
