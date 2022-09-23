@@ -197,14 +197,14 @@ class PointsManager {
         if(!resub || (resub && this.#settings.includeResubs)) {
             switch(tier) {
                 case 2:
-                    this.addPoints(months * this.#settings.pointsPerSubT2);
+                    this.addPoints(/*months * in case you want to multiply months*/this.#settings.pointsPerSubT2);
                     break;
                 case 3:
-                    this.addPoints(months * this.#settings.pointsPerSubT3);
+                    this.addPoints(/*months * in case you want to multiply months*/this.#settings.pointsPerSubT3);
                     break;
                 case 1:
                 default:
-                    this.addPoints(months * this.#settings.pointsPerSub);
+                    this.addPoints(/*months * in case you want to multiply months*/this.#settings.pointsPerSub);
                     break;
             }
         }
