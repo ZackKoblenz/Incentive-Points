@@ -1,0 +1,25 @@
+#paste this section first
+
+$clientid = ""
+$redirect = "https://communitygoals-api.azurewebsites.net/oauth/streamlabs"
+
+"https://streamlabs.com/api/v1.0/authorize?response_type=code&client_id=$clientid&redirect_uri=$redirect&scope=socket.token%20donations.read"
+
+#then go to the url it outputs in your browser and authorize the app
+
+#fill in the auth code from the url it redirects you to and get your client secret from the app registration in your profile
+
+$authcode = ""
+$clientsecret = ""
+
+$token = irm 'https://streamlabs.com/api/v1.0/token' -method post -Body @"
+grant_type=authorization_code&client_id=$clientid&client_secret=$clientsecret&redirect_uri=$redirect&code=$authCode
+"@
+
+$accesstoken = $token.access_token
+
+$sockettoken = irm "https://streamlabs.com/api/v1.0/socket/token?access_token=$accesstoken"
+
+$sockettoken.socket_token | clip
+
+#the socket token will be in your clipboard
