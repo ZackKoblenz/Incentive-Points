@@ -131,12 +131,23 @@ class PointsManager {
                 setPoints.value = this.points;
             }
         }
+        const addPointsButton = document.getElementById('addPointsBtn');
+        if(addPointsButton) {
+            addPointsButton.addEventListener('click', (event) => {
+                const addPoints = document.getElementById('addPoints');
+                if(addPoints) {
+                    this.addPoints(Number(addPoints.value));
+                }
+                event.preventDefault();
+                window.location = 'pointwidget.html';
+            });
+        }
     }
 
     async update() {
         const e = document.getElementById('points');
         if(e) {
-            e.innerText = this.points;
+            e.innerText = Math.floor(this.points);
             await animistaCSS($(e), 'jello-horizontal', false);
         }
     }
