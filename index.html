@@ -31,41 +31,46 @@
                <li class="navbar__item">
                   <a href="navbar/pointwidget.html" class="navbar__links">Point Widget</a>
                </li>
-               <li class="navbar__btn">
+               <li class="navbar__item">
                 <a href="landingpage.html" class="button2">Logout</a>
              </li>
             </ul>
          </div>
          </nav>
          <script src="navbar.js"></script>
+         <script src="app.js"></script>
         <br>
         <br>
         <form>
         <br>
             <h2>Tips and Bits:</h2>
-            <input type="number" name="pointsPerBits" value="3"> points per <input type="number" name="perBits" value="100"> Bits
+            <input type="number" name="pointsPerBits" id="pointsPerBits" value="3"> points per <input type="number" name="perBits" id="perBits" value="100"> Bits
         <br>
         <br>
-            <input type="number" name="pointsPerDollar" value="3"> points per <input type="number" name="perDollar" value="1"> Dollar(s)
+            <input type="number" name="pointsPerDollar" id="pointsPerDollar" value="3"> points per <input type="number" name="perDollar" id="perDollar" value="1"> Dollar(s)
         <br>
         <br>
         <h2>Subscriptions:</h2>
-            <input type="checkbox" name="includeGifts" value="true" checked="" id="padBox"> include gifted subs
+            <input type="checkbox" name="includeGifts" value="true" checked="" id="includeGifts"> include gifted subs
         <br>
-            <input type="checkbox" name="includeResubs" value="true" checked="" id="padBox"> include resubscriptions
-        <br>
-        <br>
-            <input type="number" name="pointsPerSub" value="10"> points per Tier 1 Sub
+            <input type="checkbox" name="includeResubs" value="true" checked="" id="includeResubs"> include resubscriptions
         <br>
         <br>
-            <input type="number" name="pointsPerSubT2" value="20"> points per Tier 2 Sub
+            <input type="number" name="pointsPerSub" id="pointsPerSub" value="10"> points per Tier 1 Sub
         <br>
         <br>
-            <input type="number" name="pointsPerSubT3" value="60"> points per Tier 3 Sub
+            <input type="number" name="pointsPerSubT2" id="pointsPerSubT2" value="20"> points per Tier 2 Sub
+        <br>
+        <br>
+            <input type="number" name="pointsPerSubT3" id="pointsPerSubT3" value="60"> points per Tier 3 Sub
         <br>
         <br>
         <button class="button special" type="submit" id="saveSetBtn">Save Settings</button>
         </form>
+        <script>
+            const settings = new IPSettings();
+
+        </script>
     </body>
     <footer>
 

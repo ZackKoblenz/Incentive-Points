@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <script src="../app.js"></script>
     </head>
     <body>
         <nav class="navbar">
@@ -41,9 +42,14 @@
         <br>
         <br>
         <form>
-        
-        <button class="button special" type="submit" id="connectStreamlabsBtn">Link Streamlabs</button>
+         <input type="text" name="slToken" id="slToken" value=""> Token
+         <br>
+         <br>
+        <button class="button special" type="submit" id="saveSetBtn">Link Streamlabs</button>
         </form>
+        <script>
+         const settings = new IPSettings();
+        </script>
     </body>
     <footer>
 
