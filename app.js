@@ -101,6 +101,12 @@ class IPSettings {
             points.style.fontWeight = this.fontWeight;
             points.style.color = this.fontColor;
         }
+        const games = document.getElementById('currentGame');
+        if(games) {
+            games.style.fontSize = `${this.fontSize/3}px`;
+            games.style.fontWeight = this.fontWeight;
+            games.style.color = this.fontColor;
+        }
     }
 }
 
@@ -147,6 +153,7 @@ class PointsManager {
     async update() {
         const e = document.getElementById('points');
         const f = document.getElementById('currentGame');
+        //Make it so Games and maxPoints can be assigned by a User at a later Date
         const games = ['Bioshock 1', 'Bioshock 2', 'Little Nightmares', 'Little Nightmares 2', 'Undertale', 'Firewatch', 'RE8', 'Dark Deception', 'Poppy Playtime', 'Dead Space 3', 'Alien Isolation', 'Visage'];
         const maxPoints = 7500;
         const perGamePoints = (maxPoints / games.length);
@@ -155,61 +162,11 @@ class PointsManager {
             await animistaCSS($(e), 'jello-horizontal', false);
         }
         if(f) {
-            // if(Math.floor(this.points) >= maxPoints){
-            //     f.innerText = games[11];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
-            // else if(Math.floor(this.points) >= (maxPoints - (perGamePoints))){
-            //     f.innerText = games[10];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
-            // else if(Math.floor(this.points) >= (maxPoints - (perGamePoints * 2))){
-            //     f.innerText = games[9];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
-            // else if(Math.floor(this.points) >= (maxPoints - (perGamePoints * 3))){
-            //     f.innerText = games[8];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
-            // else if(Math.floor(this.points) >= (maxPoints - (perGamePoints * 4))){
-            //     f.innerText = games[7];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
-            // else if(Math.floor(this.points) >= (maxPoints - (perGamePoints * 5))){
-            //     f.innerText = games[6];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
-            // else if(Math.floor(this.points) >= (maxPoints - (perGamePoints * 6))){
-            //     f.innerText = games[5];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
-            // else if(Math.floor(this.points) >= (maxPoints - (perGamePoints * 7))){
-            //     f.innerText = games[4];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
-            // else if(Math.floor(this.points) >= (maxPoints - (perGamePoints * 8))){
-            //     f.innerText = games[3];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
-            // else if(Math.floor(this.points) >= (maxPoints - (perGamePoints * 9))){
-            //     f.innerText = games[2];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
-            // else if(Math.floor(this.points) >= (maxPoints - (perGamePoints * 10))){
-            //     f.innerText = games[1];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
-            // else if(Math.floor(this.points) >= (maxPoints - (perGamePoints * 11))){
-            //     f.innerText = games[0];
-            //     await animistaCSS($(f), 'jello-horizontal', false);
-            // }
             for (let i = 0; i < games.length; i++){
                 let gameId = (games.length - i - 1);
                 if(Math.floor(this.points) >= (maxPoints - (perGamePoints * i))){
                     f.innerText = games[gameId];
                     await animistaCSS($(f), 'jello-horizontal', false);
-                    console.log(Math.floor(this.points));
-                    console.log(gameId);
                     break;
                 }
             }
