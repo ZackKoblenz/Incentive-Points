@@ -13,6 +13,8 @@ class IPSettings {
     fontWeight = 'Normal';
     fontColor = '#ffffff';
     slToken = '';
+    gameList = ['Bioshock 1', 'Bioshock 2', 'Little Nightmares', 'Little Nightmares 2', 'Undertale', 'Firewatch', 'RE8', 'Dark Deception', 'Poppy Playtime', 'Dead Space 3', 'Alien Isolation', 'Visage'];
+
 
     static storageKey = 'ZK.IncentivePoints.Settings';
 
@@ -107,6 +109,19 @@ class IPSettings {
             games.style.fontWeight = this.fontWeight;
             games.style.color = this.fontColor;
         }
+        const addGamesButton = document.getElementById('addGamesBtn');
+        if(addGamesButton) {
+            addGamesButton.addEventListener('click', (event) =>{
+                const addGames = document.getElementById('addGames');
+                if(addGames) {
+                    this.gameList.push(addGames.value);
+                    console.log(this.gameList)
+                    settings.save()
+                    addGames.value = "";
+                }
+                event.preventDefault()
+            });
+        }
     }
 }
 
@@ -154,18 +169,17 @@ class PointsManager {
         const e = document.getElementById('points');
         const f = document.getElementById('currentGame');
         //Make it so Games and maxPoints can be assigned by a User at a later Date
-        const games = ['Bioshock 1', 'Bioshock 2', 'Little Nightmares', 'Little Nightmares 2', 'Undertale', 'Firewatch', 'RE8', 'Dark Deception', 'Poppy Playtime', 'Dead Space 3', 'Alien Isolation', 'Visage'];
         const maxPoints = 7500;
-        const perGamePoints = (maxPoints / games.length);
+        const perGamePoints = (maxPoints / this.gameList.length);
         if(e) {
             e.innerText = Math.floor(this.points);
             await animistaCSS($(e), 'jello-horizontal', false);
         }
         if(f) {
-            for (let i = 0; i < games.length; i++){
-                let gameId = (games.length - i - 1);
+            for (let i = 0; i < this.gameList.length; i++){
+                let gameId = (this.gameList.length - i - 1);
                 if(Math.floor(this.points) >= (maxPoints - (perGamePoints * i))){
-                    f.innerText = games[gameId];
+                    f.innerText = this.gameList[gameId];
                     await animistaCSS($(f), 'jello-horizontal', false);
                     break;
                 }
