@@ -13,7 +13,7 @@
                   <span class="bar"></span>
                   <span class="bar"></span>
                </div>
-               <ul class="navbar__menu">
+            <ul class="navbar__menu">
                 <li class="navbar__item">
                     <a href="../index.html" class="navbar__links">Point Settings</a>
                  </li>
@@ -45,30 +45,16 @@
         <br>
         <br>
         <form>
-        <div>
-            <input type="number" value="72" id="fontSize">
-            <br>
-            Size
-        </div>
-        <div>
-        <select name="weight" id="fontWeight">
-            <option value="200">Light</option>
-            <option value="400">Normal</option>
-            <option value="700">Bold</option>
-        </select>
+        <h2>Add a game to your incentives list:</h2>
         <br>
-        Weight
-        </div>
-        <div>
-            <input type="color" id="fontColor">
-            <br>
-            Color
-        </div>
+        <input type="text" id="addGames">
         <br>
-        <button class="button special" type="submit" id="saveSetBtn">Save Settings</button>
+        <br>
+        <button class="button special" type="submit" id="addGamesBtn">Add Game</button>
         </form>
         <script>
          const settings = new IPSettings();
+         const pointsManager = new PointsManager(settings);
         </script>
     </body>
     <footer>
