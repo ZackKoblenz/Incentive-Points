@@ -5,21 +5,21 @@ function Home(){
                 <h2>Tips and Bits:</h2>
                 <div className="container">
                     <div className="noWrap">
-                        <input type="number" name="pointsPerBits" id="pointsPerBits" value="3"></input>
+                        <input type="number" name="pointsPerBits" id="pointsPerBits" defaultValue="3"></input>
                     </div>
                         <p>points per</p>
                     <div className="noWrap noWarpPlus">
-                        <input type="number" name="perBits" id="perBits" value="100"></input>
+                        <input type="number" name="perBits" id="perBits" defaultValue="100"></input>
                     </div>
                         <p>Bit(s)</p>
                     </div>
                 <div className="container">
                     <div className="noWrap">
-                        <input type="number" name="pointsPerDollar" id="pointsPerDollar" value="3"></input>
+                        <input type="number" name="pointsPerDollar" id="pointsPerDollar" defaultValue="3"></input>
                     </div>
                         <p>points per</p>
                     <div className="noWrap noWarpPlus">
-                        <input type="number" name="perDollar" id="perDollar" value="1"></input>
+                        <input type="number" name="perDollar" id="perDollar" defaultValue="1"></input>
                     </div>
                         <p>Dollar(s)</p>
                     </div>
@@ -33,15 +33,15 @@ function Home(){
                     <p>include resubscriptions</p>
                 </div>
                 <div className="container">
-                    <input type="number" name="pointsPerSub" id="pointsPerSub" value="10"></input> 
+                    <input type="number" name="pointsPerSub" id="pointsPerSub" defaultValue="10"></input> 
                     <p>points per Tier 1 Sub</p>
                 </div>
                 <div className="container">
-                <input type="number" name="pointsPerSubT2" id="pointsPerSubT2" value="20"></input> 
+                <input type="number" name="pointsPerSubT2" id="pointsPerSubT2" defaultValue="20"></input> 
                 <p>points per Tier 2 Sub</p>
                 </div>
                 <div className="container">
-                <input type="number" name="pointsPerSubT3" id="pointsPerSubT3" value="60"></input> 
+                <input type="number" name="pointsPerSubT3" id="pointsPerSubT3" defaultValue="60"></input> 
                 <p>points per Tier 3 Sub</p>
                 </div>
                 <br></br>
@@ -49,6 +49,7 @@ function Home(){
                 <button className="button special" type="submit" id="saveSetBtn">Save Settings</button>
             </form>
             <br></br>
+            
         </>
     )
 }

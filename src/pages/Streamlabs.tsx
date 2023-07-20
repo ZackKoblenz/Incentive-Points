@@ -7,8 +7,8 @@ function Streamlabs(){
     <h2>Put Streamlabs Token Here</h2>
         <form>
             <div>
-            <input type="text" name="slToken" id="slToken" value=""></input> 
-             Token
+            <input type="text" name="slToken" id="slToken" defaultValue=""></input> 
+            Token
             </div>
             <button className="button special" type="submit" id="saveSetBtn">Link Streamlabs</button>
         </form>

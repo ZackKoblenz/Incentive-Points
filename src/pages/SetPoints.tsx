@@ -4,7 +4,7 @@ function SetPoints(){
         <>
             <form>
                 <h2>Set the Starting Points</h2>
-            <input type="number" id="setPoints" value="0"></input>
+            <input type="number" id="setPoints" defaultValue="0"></input>
 
             <p> Points </p>
 
