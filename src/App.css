@@ -1,46 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
 
 
 input[type=number] {
@@ -58,17 +16,17 @@ body {
     font-family: 'Montserrat', sans-serif;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+
     text-align: center;
     background: #36393e;
     font-weight: 100;
     margin: 0px;
-    padding: 100px;
     color:#ffffff;
 }
 form {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    
 }
 
 input[type="submit"].special, input[type="reset"].special, input[type="button"].special, .button.special {
@@ -169,8 +127,8 @@ ul .navbar{
     position: sticky;
     top: 0;
     z-index: 999;
-    border-radius: 10px;
-    
+    border-radius: 0px;
+    position: sticky;
 }
 
 .navbar__container {
@@ -253,7 +211,7 @@ ul .navbar{
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1079px) {
+@media screen and (max-width: 800px) {
     .navbar__container {
         display: flex;
         justify-content: space-between;
@@ -344,4 +302,21 @@ ul .navbar{
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+}
+.noWrap{
+  flex: 1;
+  padding: 10px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.noWrapPlus{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

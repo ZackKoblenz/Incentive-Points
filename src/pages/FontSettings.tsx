@@ -1,18 +1,29 @@
-function AddPoints(){
+function FontSettings(){
 
     return(
     <>
+    <br></br>
+    <br></br>
         <form>
-            <h2>How much time to manually add:</h2>
-        <br />
-            <input type="number" value="0" id="addPoints"></input>
-        <br />
-        Points
-        <br />
-        <br />
-        <button className="button special" type="submit" id="addPointsBtn">Add Points</button>
+        <div>
+            <input type="number" value="72" id="fontSize"></input>
+            <p>Size</p>
+        </div>
+        <div>
+            <select name="weight" id="fontWeight">
+                <option value="200">Light</option>
+                <option value="400">Normal</option>
+                <option value="700">Bold</option>
+            </select>
+            <p>Weight</p>
+        </div>
+        <div>
+            <input type="color" id="fontColor"></input>
+            <p>Color</p>
+        </div>
+        <button class="button special" type="submit" id="saveSetBtn">Save Settings</button>
         </form>
     </>
     )
 }
-export default AddPoints
+export default FontSettings

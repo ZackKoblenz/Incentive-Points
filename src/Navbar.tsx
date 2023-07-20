@@ -11,7 +11,7 @@ function Navbar (){
             </div>
                 <ul className="navbar__menu">
                     <li className="navbar__item">
-                        <a href="/pointsettings" className="navbar__links">Point Settings</a>
+                        <a href="/" className="navbar__links">Point Settings</a>
                     </li>
                     <li className="navbar__item">
                         <a href="/addpoints" className="navbar__links">Add Points</a>
@@ -23,7 +23,7 @@ function Navbar (){
                         <a href="/fontsettings" className="navbar__links">Font Settings</a>
                     </li>
                     <li className="navbar__item">
-                        <a href="/connectstreamlabs" className="navbar__links">Connect Streamlabs</a>
+                        <a href="/streamlabs" className="navbar__links">Connect Streamlabs</a>
                     </li>
                     <li className="navbar__item">
                         <a href="/pointwidget" className="navbar__links">Point Widget</a>

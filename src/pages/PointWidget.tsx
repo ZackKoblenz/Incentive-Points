@@ -3,7 +3,7 @@ function PointWidget(){
     return(
     <>
         <div id="points"></div>
-        <a href="../index.html">settings</a>
+        <a href="/">settings</a>
     </>
     )
 }
